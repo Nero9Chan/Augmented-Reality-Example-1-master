@@ -59,3 +59,8 @@ sceneform.asset('sampledata/curtain/curtain.obj',
         'default',
         'sampledata/rocket/curtain.sfa',
         'src/main/assets/curtain')
+
+sceneform.asset('sampledata/cube/cube.obj',
+        'default',
+        'sampledata/cube/cube.sfa',
+        'src/main/assets/cube')

@@ -48,10 +48,10 @@
                 android:src="@drawable/curtain" />
 
         <ImageView
-                android:id="@+id/box"
+                android:id="@+id/cube"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:contentDescription="@string/box"
+                android:contentDescription="@string/cube"
                 android:src="@drawable/box" />
 
 

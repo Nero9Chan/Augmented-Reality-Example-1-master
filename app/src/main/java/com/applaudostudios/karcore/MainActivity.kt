@@ -59,6 +59,9 @@ class MainActivity : AppCompatActivity() {
         curtain.setOnClickListener {
             setModelPath("curtain.sfb")
         }
+        cube.setOnClickListener {
+            setModelPath("cube.sfb")
+        }
     }
 
     /***
@@ -87,19 +90,19 @@ class MainActivity : AppCompatActivity() {
         transformableNode.renderable = renderableObject
 
         //****************//
-        //ALL scales of models should between 0.75 and 1.75
+        //DEFAULT: ALL scales of models should between 0.75 and 1.75
         // >= 0.75 && <= 1.75
 
+        transformableNode.scaleController.minScale = 0.01f
+        transformableNode.scaleController.maxScale = 2f
+
         if(selectedObject == Uri.parse("curtain.sfb")){
-            transformableNode.localScale = Vector3(0.5f, 0.5f, 0.5f)
-            //transformableNode.localRotation = Quaternion.axisAngle(Vector3(0f, 40f, 0f), 40f)
+            transformableNode.localScale = Vector3(0.1f, 0.1f, 0.1f)
+            transformableNode.localRotation = Quaternion.axisAngle(Vector3(0f, 40f, 0f), 40f)
             Log.d("checking", "detected curtain")
         }
 
-        if(selectedObject == Uri.parse("LampPost.sfb")){
-            transformableNode.localScale = Vector3(2f, 2f, 2f)
-            Log.d("checking", "detected LampPost")
-        }
+        transformableNode.translationController.
 
         transformableNode.setParent(anchorNode)
         fragment.arSceneView.scene.addChild(anchorNode)
